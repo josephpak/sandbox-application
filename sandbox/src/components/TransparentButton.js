@@ -21,7 +21,7 @@ const TransparentButtonWrapper = styled.button`
     ${props => (props.type === 'delete' ? `color: #C13C14; border-color: #E4410D` : null)}
 `
 
-const TransparentButton = props => {
+export default function TransparentButton(props) {
   return (
     <> 
         <TransparentButtonWrapper
@@ -33,4 +33,3 @@ const TransparentButton = props => {
   )
 }
 
-export default TransparentButton;

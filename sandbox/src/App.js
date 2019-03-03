@@ -3,6 +3,7 @@ import './App.css';
 
 
 import TransparentButton from './components/TransparentButton';
+import Carousel from './components/Carousel';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         text="Add"
         type="add"
         />
+        <Carousel />
       </div>
     );
   }
