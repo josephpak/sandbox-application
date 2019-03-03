@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { carouselData } from '../../src/data';
+import { carouselData } from '../../data';
 import styled, {css} from 'styled-components';
+
+import left from './left-arrow.png'
+import right from './right-arrow.png'
+
 
 const CarouselWrapper = styled.div`
   width: 100%;
@@ -29,18 +33,16 @@ const CarouselButton = styled.div`
   align-items: none;
   flex-direction: row;
   color: #fff;
-  background-color: #333;
   font-size: 40px;
   border-radius: 50%;
   position: absolute;
   width: 50px;
   height: 50px;
   cursor: pointer;
+  z-index: 1000;
 
-  &:hover {
-    color: #333;
-    background-color: #fff;
-    border: 2px solid #333;
+  img {
+    display: block;
   }
 
   ${props =>
@@ -107,9 +109,9 @@ export default class Carousel extends Component {
   render(){
     return (
       <CarouselWrapper>
-        <CarouselButton type="left" onClick={this.leftClick}>{"<"}</CarouselButton>
+        <CarouselButton type="left" onClick={this.leftClick}><img src={left} /></CarouselButton>
         <div>{this.selectedImage()}</div>
-        <CarouselButton type="right" onClick={this.rightClick}>{">"}</CarouselButton>
+        <CarouselButton type="right" onClick={this.rightClick}><img src={right} /></CarouselButton>
       </CarouselWrapper>
     )
   }

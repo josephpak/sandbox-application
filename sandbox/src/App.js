@@ -3,7 +3,7 @@ import './App.css';
 
 
 import TransparentButton from './components/TransparentButton';
-import Carousel from './components/Carousel';
+import Carousel from './components/Carousel/Carousel';
 
 class App extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index';
-import Carousel from '../components/Carousel'
+import Carousel from '../components/Carousel/Carousel'
 
 import { storiesOf } from '@storybook/react';
 
