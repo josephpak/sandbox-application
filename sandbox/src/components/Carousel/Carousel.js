@@ -50,7 +50,6 @@ const CarouselButton = styled.div`
     css`
       top: 50%;
       left: 25px;
-      transform: translate(0, -50%);
     `}
 
     ${props =>
@@ -58,7 +57,6 @@ const CarouselButton = styled.div`
       css`
         top: 50%;
         right: 25px;
-        transform: translate(0, -50%);
       `}  
 `
 
@@ -70,6 +68,7 @@ export default class Carousel extends Component {
       currentIndex: 0
     }
   }
+  
   componentDidMount(){
     this.setState({
       images: carouselData

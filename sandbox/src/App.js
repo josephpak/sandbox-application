@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import './App.css';
+import Dropdown from './components/Dropdown/Dropdown';
+import { locationData } from './data.js'
 
-
-import TransparentButton from './components/TransparentButton';
-import Carousel from './components/Carousel/Carousel';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      location: locationData
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <TransparentButton 
-        text="Add"
-        type="add"
+      <>
+        <Dropdown
         />
-        <Carousel />
-      </div>
+      </>
     );
   }
 }
